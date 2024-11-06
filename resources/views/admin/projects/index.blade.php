@@ -22,14 +22,16 @@
                             <h5 class="card-title fw-bold fs-3">{{ $project->title }}</h5>
                             <p class="card-text">{{ $project->info }}</p>
                             <a href="{{ $project->url }}" class="card-link">Repository GitHUb</a>
-                            <a href="{{ route("admin.projects.show", $project->id) }}" class="btn btn-sm btn-primary me-2">Show</a>
-                            {{--<a href="{{ route("project.edit", $project->id) }}" class="btn btn-sm btn-success me-2">Edit</a>
-                            <form action="{{ route("project.delete", $project->id) }}" method="POST" class="d-inline project-destroyer" custom-data-name="{{ $project->name }}">
-                                @csrf
-                                @method("DELETE")
+                            <div class="mt-2">
+                                <a href="{{ route("admin.projects.show", $project->id) }}" class="btn btn-sm btn-primary me-2">Show</a>
+                                <a href="{{ route("admin.projects.edit", $project->id) }}" class="btn btn-sm btn-success me-2">Edit</a>
+                                <form action="{{ route("admin.projects.delete", $project->id) }}" method="POST" class="d-inline project-destroyer" custom-data-name="{{ $project->name }}">
+                                    @csrf
+                                    @method("DELETE")
 
-                                <button type="submit" class="btn btn-sm btn-warning"> Delete </button>
-                            </form> --}}
+                                    <button type="submit" class="btn btn-sm btn-warning"> Delete </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 @empty

@@ -75,6 +75,8 @@
         <main class="py-4">
             @yield('content')
         </main>
+        @vite("resources/js/app.js")
+        @yield("additional-scripts")
     </div>
 </body>
 </html>
