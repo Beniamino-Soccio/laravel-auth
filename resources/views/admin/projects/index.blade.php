@@ -12,7 +12,7 @@
             <div class="col-8">
                 <div class="mb-3">
                     <a href="{{ route("admin.projects.create") }}" class="btn btn-primary btn-lg">
-                        Create new character
+                        Create new project
                     </a>
                 </div>
 

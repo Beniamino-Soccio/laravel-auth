@@ -22,7 +22,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view("projects.create");
+        return view("admin.projects.create");
     }
 
     /**
@@ -33,7 +33,7 @@ class ProjectController extends Controller
 
         $data = $request->all();
         $project = Project::create($data);
-        return redirect()->route("admin.projects.show", [ "id" => $project->id]);
+        return redirect()->route("admin.projects.show", [$project->id]);
     }
 
     /**
